@@ -1,0 +1,1 @@
+INSERT INTO my_entity(id, counter) VALUES (1, 0);
