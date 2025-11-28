@@ -30,7 +30,7 @@ public class CounterProducer {
     Vertx vertx;
 
     public void onStart(@Observes StartupEvent event) {
-        vertx.setPeriodic(100L, id -> {
+        vertx.setPeriodic(50L, id -> {
             runTask();
         });
     }
