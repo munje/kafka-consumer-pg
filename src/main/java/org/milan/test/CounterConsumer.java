@@ -20,9 +20,10 @@ public class CounterConsumer {
     MyEntityService myEntityService;
 
     @Incoming("counter")
-    @Blocking
-    // @Blocking(ordered = false)
-    // @Blocking(value = "my-custom-pool")
+    @Blocking                                               // Work
+    // @Blocking(ordered = false)                           // Does not work
+    // @Blocking(value = "my-custom-pool", ordered = false) // Work
+    // @Blocking(value = "my-custom-pool")                  // Work
     @Transactional
     public void consume(Integer counter) throws InterruptedException {
         logger.info("Received counter: " + counter);
