@@ -18,9 +18,10 @@
 //    PauseChannelService service;
 //
 //    public void onStop(@Observes ShutdownEvent event) throws InterruptedException {
+//        logger.info("Received ShutdownEvent - Quarkus is stopping, pausing all Kafka channels first ...");
+//
 //        int sleepTime = 2000;
 //
-//        logger.info("Received ShutdownEvent - Quarkus is stopping, pausing all Kafka channels first ...");
 //        service.pauseAll();
 //        logger.infof("Kafka channels are paused, starting sleep for %s ms ...", sleepTime);
 //

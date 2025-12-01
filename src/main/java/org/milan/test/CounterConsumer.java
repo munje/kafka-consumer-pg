@@ -31,7 +31,8 @@ public class CounterConsumer {
         logger.infof("Entity before update: %s", a.getCounter());
         a.setCounter(counter);
 
-        // Thread.sleep(1000);
+        // simulate processing ...
+        // Thread.sleep(100);
         logger.info("Finished processing: " + counter);
     }
 }
